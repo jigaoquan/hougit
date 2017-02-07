@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			#div1{
+				width: 50px;
+				height: 50px;
+				background: red;
+				/*基于自身大小的百分比*/
+				/*通过border-radius设置成圆的准则
+				 1.先成为正方形
+				 2.border-radius>=50%
+				 */
+				-border-radius: 50%;
+				border-radius:25px;
+			}
+			#div2{
+				width: 200px;
+				height: 100px;
+				background: green;
+				/*
+				 * 4个参数的时候
+				 * 左上角,右上角,右下角,左下角
+				 * 四个参数相同时可以只写一个
+				 * 当参数为四个时,说明每个角的水平半径和垂直半径相等
+				 */
+				-border-radius:10px ;
+				/*四个角的水平半径/四个角的垂直半径*/
+				/*(border-radius:10px 30px 40px 50px/10px 30px 40px 50px)*/
+				border-radius:10px 30px 40px 50px;
+				
+			}
+			#rc{
+				width: 50px;
+				height: 50px;
+				background: pink;
+				border-top-right-radius:50px;
+			}
+			#lc{
+				width: 50px;
+				height: 50px;
+				-border-top-left-radius:50px;
+				-border-bottom-right-radius:50px;
+				border-top-right-radius:50px;
+				border-bottom-left-radius:50px;
+				-background: blue;
+				border:1px solid red;
+			}
+			#tc{
+				width: 100px;
+				height: 50px;
+				border-radius:50px 50px 0 0;
+				background: yellow;
+				
+			}
+			#ellipse{
+				width: 200px;
+				height: 60px;
+				background: mediumvioletred;
+				border-radius:100px/30px;
+			}
+			#btm{
+				width: 126px;
+				height: 30px;
+				background: olivedrab;
+				line-height: 30px;
+				text-align: center;
+				color:#FFF;
+				border-radius:13px/15px;
+			}
+			#been{
+				margin: 100px auto;
+				width: 0;
+				height: 0;
+				border:25px solid red;
+				border-radius:25px;
+				border-right-color:transparent;
+				border-left-color:transparent;
+				/*左右透明*/
+				/*border-color:red transparent red transparent;*/
+			}
+			#sha{
+				width: 200px;
+				height: 200px;
+				background-color:blueviolet;
+				/*阴影*/
+				box-shadow: 0px 0px 10px 10px green inset, 0 0 10px 10px red, 0 0 20px 20px yellow;
+				margin: auto;
+				 
+			}
+			a{
+				background: green;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<!--
+			border-radius
+			设置圆角
+			
+		-->
+		<div id="div1"></div>
+		<div id="div2"></div>
+		<!--1/4右半圆-->
+		<div id="rc"></div>
+		<div id="lc"></div>
+		<!--1/2圆-->
+		<div id="tc"></div>
+		<!--椭圆-->
+		<div id="ellipse"></div>
+		<div id="btm">点击</div>
+		<!--been-->
+		<div id="been"></div>
+		<!--box-shadow
+			元素阴影
+			参数:x偏移 y偏移 模糊程度 阴影大小 color (inset内嵌)
+			1.阴影不占文档流空间
+			2.支持多组值,每组之间用逗号分割
+		-->
+		<div id="sha"></div>
+		<a href="###">我是超链接</a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>
